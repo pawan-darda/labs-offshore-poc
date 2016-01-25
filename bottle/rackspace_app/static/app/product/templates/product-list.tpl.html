@@ -1,0 +1,43 @@
+﻿<rx-page>
+    <div class="page-actions">
+        
+    </div>
+
+    <div class="clear component-description">
+        <h2 class="title lg readme-title">Products ({{productList.length || 0}})</h2>
+        <section role="target-groups">
+            <div class="tg-filter-listItem">
+        	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  				<tr>
+                      <td valign="top">
+                        <div>
+            	                <div class="device-holder">
+                  	                <div class="device_listItems">
+			                            <ul>
+				                            <li ng-repeat="item in productList" style="padding-right:150px;">                                            
+                                            <div class="device_status">
+                                                <p class="ellipsis"><a ng-click="showModel(item)" title="{{item.product_name}}">{{item.product_name | rxCapitalize}}</a></p>
+                                                <div class="device_status_list">
+                        	                            <span class="devicelist_status">Product Type - {{item.product_type}}</span>                                                       
+                                                </div>
+                                            </div>
+				                            <div class="device_status-edit">
+                	                            <ul>                                                    
+						                            <li class="deleteItem" ><a title="Delete" ng-click="OnDeleteClick(item);">Delete</a></li>							
+				                                </ul>
+				                            </div>
+				                            </li>
+			                            </ul>
+                                        <div ng-show="productList.length==0">
+                                            <div class="norecords">No records found.</div>
+		                                </div>
+                                    </div>
+                                </div>
+           	            </div> <!-- tg-listItem-cont ends-->   
+                    </td>
+  				</tr>
+			</table>  
+        </div>
+        </section>
+    </div>
+</rx-page>
