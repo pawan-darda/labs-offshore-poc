@@ -1,0 +1,23 @@
+﻿<div ng-hide="errors == undefined || errors.length == 0">
+   
+    <script  type="text/ng-template" id="/errorTemplate.html">
+       <em ng-bind="err.message"></em>
+    </script>
+
+<div class="notification-container">
+                <div class="notification-bar" ng-class="getClassName()">
+                    <div class="notification-controls"><button class="close-icon modal-close btn-link" type="button" 
+                        ng-click="deleteError($index)">&times;</button></div> 
+                    <ul>
+                      <li ng-repeat="err in errors" ng-init="onErrorAdded();">
+                          <div ng-switch on="err.type">                            
+                            <div ng-switch-default>
+                                <ng-include src="'/errorTemplate.html'"></ng-include>
+                            </div>
+                         </div> 
+     
+                      </li>
+                   </ul>
+                </div>
+</div>
+

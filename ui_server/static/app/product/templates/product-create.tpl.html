@@ -1,0 +1,24 @@
+﻿<rx-page>
+    <div class="page-actions">
+    </div>
+
+    <div class="clear component-description">
+        <h2 class="title lg readme-title">Add Product</h2>
+            <form class="modal-form rx-form" novalidate name="form.name">
+                            <rx-form-item label="Product Id">
+                                <input type="text" ng-model="product.product_id" placeholder="Product Id" required/>
+                            </rx-form-item>
+                            <rx-form-item label="Product Type">
+                                <input type="text" ng-model="product.product_type" placeholder="Product Type" required/>
+                            </rx-form-item>
+                        <rx-form-item label="Product Name">
+                                <input type="text" ng-model="product.product_name" placeholder="Product Name" required/>
+                            </rx-form-item>
+
+                <div class="modal-footer">
+                        <button class="button submit" ng-disabled="form.name.$invalid" ng-click="saveProduct();">Add</button>
+                       <button class="button cancel" ng-click="clear();">Clear</button>
+                    </div>
+            </form>
+        </div>
+    </rx-page>
