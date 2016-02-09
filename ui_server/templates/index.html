@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>Rackspace</title>
+    <link href="static/vendor/bower_components/angular-hotkeys/hotkeys.min.css" rel="stylesheet" />
+    <link href="static/css/encore-ui-1.4.0.css" rel="stylesheet" />
+    <link href="static/vendor/bower_components/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="static/css/demo.css" rel="stylesheet" />
+    
+</head>
+<body >
+
+    <div class="notification-holder" exception-block></div>
+    <div ng-controller="shellCtrl">
+        <rx-app site-title="Rest API Demo App" menu="navRoutes" new-instance="true" collapsible-nav="true" hide-feedback="true">
+            <ui-view class="container"></ui-view>
+        </rx-app>
+    </div>
+
+    <div data-wc-overlay="" data-wc-overlay-delay="30">
+        <div rx-spinner toggle="'true'">Loading...</div>
+    </div>
+    
+
+</body>
+<script src="static/vendor/bower_components/angular/angular.js"></script>
+<script src="static/vendor/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="static/vendor/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="static/vendor/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="static/vendor/bower_components/angular-route/angular-route.js"></script>
+<script src="static/vendor/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="static/vendor/bower_components/lodash/dist/lodash.compat.js"></script>
+<script src="static/vendor/bower_components/moment/moment.js"></script>
+<script src="static/vendor/bower_components/html2canvas/build/html2canvas.js"></script>
+<script src="static/vendor/bower_components/mousetrap/mousetrap.js"></script>
+<script src="static/vendor/bower_components/angular-hotkeys/hotkeys.min.js"></script>
+
+
+<script src="static/vendor/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+<script src="static/vendor/encore-ui/encoreui-ui-tpls-1.4.0.js"></script>
+
+<script src="static/app/errorHandler/application-error.js"></script>
+<script src="static/app/errorHandler/errorConstant.js"></script>
+<script src="static/app/errorHandler/exception-directive.js"></script>
+<script src="static/app/errorHandler/exception.js"></script>
+<script src="static/app/errorHandler/exceptionService.js"></script>
+
+<script src="static/app/core/core.js"></script>
+<script src="static/app/core/config/appConfig.js"></script>
+<script src="static/app/core/config/routeHelper.js"></script>
+<script src="static/app/core/config/config.js"></script>
+<script src="static/app/core/config/httpInterceptor.js"></script>
+
+
+<script src="static/app/global/global.js"></script>
+<script src="static/app/global/service/modelService.js"></script>
+<script src="static/app/global/directive/overlay.js"></script>
+<script src="static/app/global/constant.js"></script>
+
+<script src="static/app/product/product.js"></script>
+<script src="static/app/product/services/repository.js"></script>
+<script src="static/app/product/controller/productlistCtrl.js"></script>
+<script src="static/app/product/controller/productdetailsCtrl.js"></script>
+<script src="static/app/product/controller/productCreateCtrl.js"></script>
+<script src="static/app/product/product.config.js"></script>
+
+<script src="static/app/setting/setting.js"></script>
+<script src="static/app/setting/controller/settingsCtrl.js"></script>
+<script src="static/app/setting/settings.config.js"></script>
+
+<script src="static/app/layout/layout.js"></script>
+<script src="static/app/layout/controller/shellCtrl.js"></script>
+
+<script src="static/app/app.js"></script>
+</html>
